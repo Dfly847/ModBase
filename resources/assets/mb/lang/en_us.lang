@@ -6,3 +6,8 @@ itemGroup.modbasetab=Mod Base
 
 //Blocks
 tile.table_oak.name=Oak Table
+tile.table_spruce.name=Spruce Table
+tile.table_birch.name=Birch Table
+tile.table_jungle.name=Jungle Table
+tile.table_acacia.name=Acacia Table
+tile.table_darkoak.name=Dark Oak Table
