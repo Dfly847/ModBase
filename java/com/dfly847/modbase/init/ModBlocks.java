@@ -3,6 +3,7 @@ package com.dfly847.modbase.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dfly847.modbase.blocks.BlockBaseDiningChair;
 import com.dfly847.modbase.blocks.TableBlock;
 
 import net.minecraft.block.Block;
@@ -18,4 +19,6 @@ public class ModBlocks
 	public static final Block TABLE_JUNGLE = new TableBlock("table_jungle", Material.WOOD);
 	public static final Block TABLE_ACACIA = new TableBlock("table_acacia", Material.WOOD);
 	public static final Block TABLE_DARKOAK = new TableBlock("table_darkoak", Material.WOOD);
+	
+	public static final Block OAK_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_oak", Material.WOOD);
 }
