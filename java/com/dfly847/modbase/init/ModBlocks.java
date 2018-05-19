@@ -20,5 +20,10 @@ public class ModBlocks
 	public static final Block TABLE_ACACIA = new TableBlock("table_acacia", Material.WOOD);
 	public static final Block TABLE_DARKOAK = new TableBlock("table_darkoak", Material.WOOD);
 	
+	public static final Block ACACIA_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_acacia", Material.WOOD);
+	public static final Block BIRCH_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_birch", Material.WOOD);
+	public static final Block DARKOAK_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_darkoak", Material.WOOD);
+	public static final Block JUNGLE_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_jungle", Material.WOOD);
 	public static final Block OAK_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_oak", Material.WOOD);
+	public static final Block SPRUCE_DINING_CHAIR = new BlockBaseDiningChair("dining_chair_spruce", Material.WOOD);
 }

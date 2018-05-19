@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "mb:dining_chair_darkoak"           },
+        "facing=east":  { "model": "mb:dining_chair_darkoak", "y": 90  },
+        "facing=south": { "model": "mb:dining_chair_darkoak", "y": 180 },
+        "facing=west":  { "model": "mb:dining_chair_darkoak", "y": 270 }
+    }
+}
