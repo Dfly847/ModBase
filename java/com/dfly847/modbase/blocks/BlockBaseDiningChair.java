@@ -1,9 +1,13 @@
 package com.dfly847.modbase.blocks;
 
+import java.util.List;
+
 import com.dfly847.modbase.Main;
+import com.dfly847.modbase.entity.EntitySittableBlock;
 import com.dfly847.modbase.init.ModBlocks;
 import com.dfly847.modbase.init.ModItems;
 import com.dfly847.modbase.util.IHasModel;
+import com.dfly847.modbase.util.SittableUtil;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -11,6 +15,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -105,6 +110,18 @@ public class BlockBaseDiningChair extends BlockHorizontal implements IHasModel
 		return DINING_CHAIR_AABB;
 	}
 	
-	//Still need to fix bounding box on chair back and collision
+	@Override
+	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, Entity entityIn, boolean p_185477_7_)
+	{
+		if (!(entityIn instanceof EntitySittableBlock)) {
+			addCollisionBoxToList(pos, entityBox, collidingBoxes, DINING_CHAIR_AABB);
+		}
+	}
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+	{
+		return SittableUtil.sitOnBlock(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn, 0.4);
+	}
 }
 
